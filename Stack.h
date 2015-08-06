@@ -25,7 +25,6 @@ public:
     void push(Token token);
     void pop(Queue& queue);
     void freeStack();
-    void print();
     
     string pop();
     string popStr();

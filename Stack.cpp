@@ -29,12 +29,10 @@ void Stack::push(Token token)
     stackArray[stackIndex] = (char*)chrToken;
     
     stackIndex++;
-    //realloc
     stackArray = (char **)realloc(stackArray, sizeof(char *) * (stackIndex + 1));
     
-//check eprfromance time iteratino countn in 10 secz 1 sec too unrelaibalee
 }
-//try vecotr class
+
 void Stack::pop(Queue& queue)
 {
     queue.push(Token(stackArray[stackIndex - 1]));
@@ -47,11 +45,6 @@ void Stack::pop(Queue& queue)
 void Stack::freeStack()
 {
     free(stackArray);
-}
-
-void Stack::print()
-{
-    //stakcpeepk
 }
 
 string Stack::pop()
@@ -68,7 +61,6 @@ string Stack::pop()
 string Stack::popStr()
 {
     return stackArray[stackIndex - 1];
-   // return "";
 }
 
 bool Stack::isEmpty()
